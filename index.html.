@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yayasan Hadid Karangmojo — Yogyakarta</title>
+  <meta name="description" content="Situs resmi Yayasan Hadid Karangmojo, Yogyakarta. Pengembangan masyarakat, pendidikan, program sosial, dan layanan kemanusiaan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --ring: 36 97% 55%; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .container { max-width: 1100px; }
+    .brand-gradient { background: linear-gradient(135deg, hsl(var(--ring)), #00c2ff 60%, #5b7cfa); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(2, 6, 23, .08); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#home" class="flex items-center gap-3 font-semibold text-slate-900">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl brand-gradient text-white">YH</span>
+        <span>Yayasan Hadid Karangmojo</span>
+      </a>
+      <button id="navToggle" class="lg:hidden p-2 rounded-lg border border-slate-200">
+        <span class="sr-only">Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <ul id="navLinks" class="hidden lg:flex items-center gap-6 text-sm">
+        <li><a href="#about" class="hover:text-slate-900">Tentang</a></li>
+        <li><a href="#gallery" class="hover:text-slate-900">Galeri</a></li>
+        <li><a href="#donate" class="hover:text-slate-900">Donasi</a></li>
+        <li><a href="#contact" class="hover:text-slate-900">Kontak</a></li>
+        <li><a href="#donate" class="inline-flex items-center rounded-lg bg-slate-900 px-3 py-2 text-white hover:opacity-90">Dukung Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="brand-gradient/20 absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+    <div class="container mx-auto grid items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">
+          Memberdayakan Komunitas di <span class="underline decoration-[hsl(var(--ring))] decoration-4 underline-offset-4">Karangmojo</span>, Yogyakarta
+        </h1>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg">Yayasan Hadid Karangmojo adalah lembaga non-profit yang berfokus pada pendidikan, kesejahteraan sosial, dan pengembangan masyarakat di Gunungkidul, Yogyakarta.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#programs" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white shadow-soft">Lihat Program</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3">Hubungi Kami</a>
+        </div>
+      </div>
+      <div>
+        <div class="relative rounded-2xl bg-white shadow-soft p-2 border border-slate-100 overflow-hidden">
+          <div id="heroSlider" class="relative h-72 sm:h-96">
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl" alt="Pembagian makanan" src="https://images.unsplash.com/photo-1494949360228-4e9bde560065?q=80&w=1600&auto=format&fit=crop" />
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl opacity-0" alt="Akses air bersih" src="https://images.unsplash.com/photo-1451174969898-1f92a98c2bcd?q=80&w=1600&auto=format&fit=crop" />
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl opacity-0" alt="Dukungan pendidikan" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1600&auto=format&fit=crop" />
+          </div>
+          <button id="prevHero" class="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-9 w-9 rounded-full bg-white/80 border border-slate-200"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M15 19l-7-7 7-7'/></svg></button>
+          <button id="nextHero" class="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-9 w-9 rounded-full bg-white/80 border border-slate-200"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 5l7 7-7 7'/></svg></button>
+          <div class="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium">Karangmojo • Yogyakarta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Tentang Yayasan</h2>
+          <p class="mt-4 text-slate-600">Didirikan pada tahun <strong>2025</strong>, Yayasan Hadid Karangmojo (YHK) melayani keluarga dan pemuda melalui beasiswa, pelatihan keterampilan, serta bantuan kemanusiaan. Kami bekerja berdasarkan nilai kasih sayang, transparansi, dan kolaborasi.</p>
+          <ul class="mt-6 grid gap-3 text-slate-700">
+            <li>📍 Alamat: Karangmojo, Gunungkidul, Yogyakarta 55891</li>
+            <li>✉️ Email: <a href="mailto:middleway1122@gmail.com" class="text-sky-700">middleway1122@gmail.com</a></li>
+            <li>📞 Telepon/WhatsApp: +62 812-3456-7890</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+            <div class="text-3xl font-extrabold">3+</div>
+            <div class="mt-1 text-sm text-slate-600">Program Utama</div>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+            <div class="text-3xl font-extrabold">150+</div>
+            <div class="mt-1 text-sm text-slate-600">Penerima Manfaat per Tahun</div>
+          </div>
+        </div></div></div></section>
+
+  <!-- Galeri -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Galeri Kegiatan</h2>
+      <p class="mt-3 text-slate-600">Beberapa dokumentasi kegiatan kemanusiaan yayasan.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Relawan memberi makan orang yang membutuhkan" src="https://images.unsplash.com/photo-1494949360228-4e9bde560065?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Pembagian makanan hangat di jalan.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Pria minum air bersih" src="https://images.unsplash.com/photo-1451174969898-1f92a98c2bcd?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Akses air minum bersih untuk yang membutuhkan.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Relawan membagikan paket sembako" src="https://images.unsplash.com/photo-1576765608622-067973a79f5c?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Paket sembako untuk keluarga rentan.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Kegiatan belajar untuk anak-anak" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Dukungan pendidikan & alat tulis untuk pelajar.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Layanan kesehatan gratis" src="https://images.unsplash.com/photo-1576765974096-84f1bff8ad7b?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Pemeriksaan kesehatan gratis untuk lansia.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Aksi lapangan relawan" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Kunjungan langsung ke warga prasejahtera.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donasi -->
+  <section id="donate" class="py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Donasi</h2>
+          <p class="mt-3 text-slate-600">Dukungan Anda membantu percepatan layanan sosial. Informasi di bawah ini adalah <strong>contoh</strong>; silakan ganti dengan data resmi yayasan.</p>
+          <ul class="mt-5 grid gap-3 text-sm text-slate-700">
+            <li>• <strong>BRI (Contoh)</strong>: 0123 456 789 a.n. <em>Yayasan Hadid Karangmojo</em></li>
+            <li>• <strong>BNI (Contoh)</strong>: 9876 543 210 a.n. <em>Yayasan Hadid Karangmojo</em></li>
+            <li>• <strong>QRIS</strong>: <em>Tempelkan gambar QR resmi Anda di sini</em></li>
+            <li>• <strong>Internasional</strong>: <em>Wise / PayPal (tautan contoh)</em></li>
+            <li>• Bukti transfer & pertanyaan: <a class="text-sky-700" href="mailto:middleway1122@gmail.com">middleway1122@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="font-semibold">Kirim Pesan Cepat</h3>
+          <p class="mt-2 text-sm text-slate-600">Gunakan tombol di bawah untuk mengirim email. Untuk formulir, buat Google Forms dan sematkan di halaman ini.</p>
+          <a class="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white" href="mailto:middleway1122@gmail.com?subject=Dukungan%20untuk%20Yayasan%20Hadid%20Karangmojo">Email Kami</a>
+          <div class="mt-6 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-6 text-center">
+            <div class="mx-auto grid place-items-center">
+              <div class="aspect-square w-40 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs text-slate-500">Tempat QRIS<br/>(contoh)</div>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">Unggah gambar QRIS resmi yayasan Anda di sini.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Kontak Kami</h2>
+      <div class="mt-6 grid gap-8 lg:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
+          <div class="text-sm text-slate-600">Alamat</div>
+          <div class="mt-1 font-medium">Karangmojo, Gunungkidul, Yogyakarta 55891</div>
+          <div class="mt-4 text-sm text-slate-600">Email</div>
+          <div class="mt-1 font-medium text-sky-700">middleway1122@gmail.com</div>
+          <div class="mt-4 text-sm text-slate-600">Telepon / WhatsApp</div>
+          <div class="mt-1 font-medium">+62 812-3456-7890</div>
+          <div class="mt-6 flex items-center gap-3 text-sm">
+            <a class="underline" href="#">Facebook</a>
+            <a class="underline" href="#">Instagram</a>
+            <a class="underline" href="#">YouTube</a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="font-semibold">Formulir Kontak</h3>
+          <p class="mt-2 text-sm text-slate-600">Buat formulir Google Forms dan tempelkan tautan embed-nya di bawah ini untuk kontak gratis.</p>
+          <div class="mt-4 aspect-video w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100 grid place-items-center text-slate-500">
+            <span>Tempatkan embed Google Form di sini</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="container mx-auto px-4 py-8 text-sm text-slate-600 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>© <span id="year"></span> Yayasan Hadid Karangmojo — Yogyakarta. Semua hak dilindungi.</div>
+      <div class="flex items-center gap-4">
+        <a class="underline" href="#about">Tentang</a>
+        <a class="underline" href="#contact">Kontak</a>
+        <a class="underline" href="#donate">Donasi</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Hero slider simple autoplay
+    (function(){
+      const slider = document.getElementById('heroSlider');
+      if(!slider) return;
+      const slides = Array.from(slider.querySelectorAll('img'));
+      let i = 0;
+      const show = idx => slides.forEach((img, k)=> img.style.opacity = (k===idx? '1':'0'));
+      show(0);
+      const next = ()=>{ i = (i+1)%slides.length; show(i); };
+      const prev = ()=>{ i = (i-1+slides.length)%slides.length; show(i); };
+      const timer = setInterval(next, 4000);
+      document.getElementById('nextHero')?.addEventListener('click', ()=>{next();});
+      document.getElementById('prevHero')?.addEventListener('click', ()=>{prev();});
+      slider.addEventListener('mouseenter', ()=> clearInterval(timer));
+    })();
+  </script>
+</body>
+</html>
